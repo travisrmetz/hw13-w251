@@ -27,6 +27,6 @@ RUN make -i -j6
 RUN make install -i
 RUN apt install -y gstreamer1.0-plugins-bad
 RUN pip install --upgrade pip
-#RUN pip3 install Pillow==6.1.0
+RUN pip3 install --force-reinstall Pillow==6.1.0
 WORKDIR /jetson-inference
 
