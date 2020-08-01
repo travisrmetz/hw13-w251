@@ -1,10 +1,11 @@
-##W251 - HW 13
-###Travis R. Metz
-####July 2020
+## W251 - HW 13
+### Travis R. Metz
+#### July 2020
 
-Training time
-Accuracy etc
 Training was done on batch size of 8 due to memory limitations.
+After 100 epochs, acc1 =55.154, acc5=84.758 (on validation set)
+100 epochs took ~355 seconds each for 35,500 seconds, or 592 minutes, or almost 10 hours
+
 
 
 
@@ -25,3 +26,7 @@ Originally started training
 
 Had to restart training when it automatically stopped at 35 epochs
 ```python3 python/training/classification/train.py --start-epoch 35 --epochs 100 --resume plants/checkpoint.pth.tar --model-dir=plants /hw13/datasets/PlantCLEF_Subset```
+
+#### Model export commands
+```python3 python/training/classification/onnx_export.py --model-dir=plants```
+
